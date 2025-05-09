@@ -12,7 +12,7 @@ public class Series {
 
     public Series (DTOSeries series) {
         this.nombreSerie = series.nombreSerie();
-        this.añoLanzamiento = Integer.valueOf(series.añoLanzamiento());
+        this.añoLanzamiento = Integer.parseInt(series.añoLanzamiento().split("–")[0]);
         this.genero = series.genero();
         this.resumen = series.resumen();
         this.ratting = Double.valueOf(series.ratting());
